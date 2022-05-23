@@ -1,6 +1,14 @@
-import { saludar } from './js/componentes';
 import './styles.css';
 
-const nombre = 'Fernando';
+import {Todo,TodoList} from '/classes';
+//import { Todo } from './classes/todo.class';
+//import { TodoList } from './classes/todo-list.class';
 
-saludar( nombre );
+
+const todoList = new TodoList
+
+const tarea = new Todo('Aprender Java Script');
+
+todoList.nuevoTodo(tarea);
+
+console.log(todoList);
