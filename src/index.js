@@ -1,14 +1,16 @@
 
 import './styles.css';
 
-import{Todo , TodoList} from './classes'
-import { crearTodoHtml } from './js/componente';
 
 //import { Todo } from './classes/todo.class';
 //import { TodoList } from './classes/todo-list.class';
 
+import{Todo , TodoList} from './classes'
+import { crearTodoHtml } from './js/componente';
 
-const todoList = new TodoList();
+
+
+export const todoList = new TodoList();
 const tarea =  new Todo('Aprender JacaScript!!!');
 const tarea2 =  new Todo('Comprar unicornio');
 
