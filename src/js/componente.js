@@ -29,8 +29,9 @@ export const crearTodoHtml = (todo) => {
 
 }
 
-//Eventos
+//EVENTOS
 
+// Escucha el tipeo en el input de tareas
 txtInput.addEventListener('keyup', (event) => {
 
     if (event.keyCode === 13 && txtInput.value.length > 0) {
@@ -42,18 +43,22 @@ txtInput.addEventListener('keyup', (event) => {
 
 });
 
-
+// escucha un click en el listado de tareas  
 divTodoList.addEventListener('click', (event) => {
 
     const nombreElemento = event.target.localName;  // input , label , button
     const todoElemento = event.target.parentElement.parentElement; // ID
     const todoId = todoElemento.getAttribute('data-id');
 
-    if(nombreElemento.includes('input') ){ // click en el check
+
+    if (nombreElemento.includes('input')) { // click en el check
         todoList.marcarCompletado(todoId);
         todoElemento.classList.toggle('completed');
+    }
+    else if (nombreElemento.includes('button')) { // borrar la tarea
+      todoList.eliminarTodo(todoId);
+      divTodoList.removeChild(todoElemento);
     };
 
-    console.log(nombreElemento,todoList);
 
 });
