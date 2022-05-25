@@ -12,11 +12,11 @@ import { crearTodoHtml } from './js/componente';
 
 export const todoList = new TodoList();
 const tarea =  new Todo('Aprender JacaScript!!!');
-const tarea2 =  new Todo('Comprar unicornio');
+//const tarea2 =  new Todo('Comprar unicornio');
 
 
 todoList.nuevoTodo(tarea);
-todoList.nuevoTodo(tarea2);
+//todoList.nuevoTodo(tarea2);
 
 // tarea.completado = true;
 
@@ -24,4 +24,4 @@ console.log(tarea);
 console.log(todoList);
 
 crearTodoHtml (tarea);
-crearTodoHtml (tarea2);
+//crearTodoHtml (tarea2);
