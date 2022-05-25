@@ -9,9 +9,23 @@ import{Todo , TodoList} from './classes'
 import { crearTodoHtml } from './js/componente';
 
 
-
 export const todoList = new TodoList();
 
+todoList.todos.forEach(crearTodoHtml);
+
+// Arriba se abrevio
+//todoList.todos.forEach(element =>  crearTodoHtml(element) );
+
+// Arriba se abrevio 
+/* 
+todoList.todos.forEach(element => {
+    crearTodoHtml(element);   
+});
+ */
+
+
+
+//----------- Aca se cargo al Inicio una TArea------------------------------
 /* 
 const tarea =  new Todo('Aprender JacaScript!!!');
 todoList.nuevoTodo(tarea);
@@ -20,7 +34,8 @@ crearTodoHtml (tarea);
  */
 
 
-// Uso de localStorage y sessionStorage
+
+// --------------- Uso de localStorage y sessionStorage  ----------------------
 /* 
 localStorage.setItem('mi-key','ABC123');
 setTimeout( ()=>{
