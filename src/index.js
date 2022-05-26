@@ -13,9 +13,18 @@ export const todoList = new TodoList();
 
 todoList.todos.forEach(crearTodoHtml);
 
+
+const newTodo = new Todo('Aprender JavaScript');
+//todoList.nuevoTodo(newTodo);
+
+todoList.todos[0].imprimirClase();  // No funciona cuando no se cargaron las  instancias
+//newTodo.imprimirClase(); 
+console.log('todos', todoList.todos); // Al ver los Todo los cargados de Local Storage no son Instancias pero este ultimo "newTodo" si es una instancia
+
+//-------- Abreviacion ------
+// todoList.todos.forEach(crearTodoHtml);
 // Arriba se abrevio
 //todoList.todos.forEach(element =>  crearTodoHtml(element) );
-
 // Arriba se abrevio 
 /* 
 todoList.todos.forEach(element => {
@@ -25,7 +34,7 @@ todoList.todos.forEach(element => {
 
 
 
-//----------- Aca se cargo al Inicio una TArea------------------------------
+//----------- Aca se cargo al Inicio el desarrollo una Tarea------------------------------
 /* 
 const tarea =  new Todo('Aprender JacaScript!!!');
 todoList.nuevoTodo(tarea);

@@ -1,3 +1,5 @@
+import { Todo } from "./todo.class";
+
 export class TodoList {
 
     constructor() {
@@ -52,23 +54,23 @@ export class TodoList {
     cargarLocalStorage() {
 
         // Se reemplaza el codigo por el operador ternario
-/* 
-        if (localStorage.getItem('todo')) {
-            // this.todos = localStorage.getItem('todo');  // Asi lee el localstorage 
-            this.todos = JSON.parse(localStorage.getItem('todo'));
-        } else {
-            this.todos = [];
-        }
- */
-
-        localStorage.getItem('todo')? this.todos = JSON.parse(localStorage.getItem('todo')) : this.todos = []; 
-
+        /* 
+                if (localStorage.getItem('todo')) {
+                    // this.todos = localStorage.getItem('todo');  // Asi lee el localstorage 
+                    this.todos = JSON.parse(localStorage.getItem('todo'));
+                } else {
+                    this.todos = [];
+                }
+         */
         // Operador Ternario Correcto
-/* 
-        this.todos = (localStorage.getItem('todo'))
-        ? JSON.parse(localStorage.getItem('todo'))
-        : [];
- */
+         
+                this.todos = (localStorage.getItem('todo'))
+                ? JSON.parse(localStorage.getItem('todo'))
+                : [];
+         
+        //localStorage.getItem('todo') ? this.todos = JSON.parse(localStorage.getItem('todo')) : this.todos = [];
+        this.todos = this.todos.map(obj => Todo.fromJson(obj)); // ver sobre map en Mozilla MDN (netodos y Propiedades de JS)
+
 
     }
 
