@@ -19,7 +19,7 @@ const newTodo = new Todo('Aprender JavaScript');
 
 todoList.todos[0].imprimirClase();  // No funciona cuando no se cargaron las  instancias
 //newTodo.imprimirClase(); 
-console.log('todos', todoList.todos); // Al ver los Todo los cargados de Local Storage no son Instancias pero este ultimo "newTodo" si es una instancia
+//console.log('todos', todoList.todos); // Al ver los Todo los cargados de Local Storage no son Instancias pero este ultimo "newTodo" si es una instancia
 
 //-------- Abreviacion ------
 // todoList.todos.forEach(crearTodoHtml);

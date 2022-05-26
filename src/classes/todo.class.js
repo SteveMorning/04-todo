@@ -30,6 +30,6 @@ export class Todo{
 // esto para mostrar la diferencia de Arreglo e Instancia
     imprimirClase(){
         //console.log('imprimirclase');
-       console.log(`${this.tarea} - ${this.id}`);
+       //console.log(`${this.tarea} - ${this.id}`);
     }
 }
