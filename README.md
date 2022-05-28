@@ -1,5 +1,8 @@
-# Webpack configurado
+# Java Script
+
+Desarrollo de gestion de de tareas 
+TODO LIST
 
 Para usar este repositorio, deberán ejecutar el comando de ```npm install```
 
-Pero esto lo veremos en la siguiente sección
+
